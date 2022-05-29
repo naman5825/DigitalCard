@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- navabr section -->
+    <nav class="navbar">
+        <div class="brand-title">
+            <img src="images/Logo.png" >
+        </div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul class="menu">
+                <li><a href="">Wedding Cards</a></li>
+                <li><a href="">Birthday Cards</a></li>
+                <li><a href="">Feeling Cards</a></li>
+                <li class="end-list"><a href="">Anniversary Cards</a></li>
+                <li><a href="/">Login</a></li>
+            <li class="signup"><a href="/">Signup</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="card">
+        <div class="background">
+            <h2>Digital Card Details</h2>
+            <div class="card-details">
+                <div class="images">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/Page1.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/Page2.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/Page3.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <h2>Card Title</h2>
+                    <div class="paragraph">
+                        <p class="p1"> $499 <s>$2000</s></p>
+                        <p class="p2">75%Off</p>
+                    </div>
+                    <p class="main-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Tenetur dolores provident modi ea, saepe ipsa esse vero iure consequuntur dolorum atque hic
+                        quae.
+                    </p>
+                    <button>Try This Card</button>
+                </div>
+            </div>
+        </div>
+        <div class="Features">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="div">
+                    <div class="round"></div>
+                    <div class="p11"><p class="round-p1">Create your card in 5 mins</p></div>
+                </div>
+                <div class="div">
+                    <div class="round"></div>
+                    <div class="p12"><p class="round-p2">Customize the Text with "Edit this page" option</p></div>
+                </div>
+                <div class="div">
+                    <div class="round"></div>
+                    <div class="p13"> <p class="round-p3">Editing is available after purchase also</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+		const toggleButton=document.getElementsByClassName('toggle-button')[0]
+		const navbarlinks=document.getElementsByClassName('navbar-links')[0]
+		toggleButton.addEventListener('click',()=>{
+			navbarlinks.classList.toggle('active');
+
+		});
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+</body>
+
+</html>
